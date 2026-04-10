@@ -2,6 +2,21 @@
 
 A lightweight Connect 4 game with pass-and-play and AI modes, built for GitHub Pages.
 
+## Features
+
+- Pass-and-play or play against the AI (Easy, Normal, Hard, Expert).
+- Theme switcher (Classic, Neon, Midnight) with saved preference.
+- Animated disc drops, win highlighting, and hover previews.
+- Responsive layout and touch-friendly column targets.
+
+## Controls
+
+- Click/tap a column to drop a disc.
+- Use the mode selector to swap between Pass & Play and AI.
+- Use the difficulty selector (AI mode only) to adjust search depth.
+- Use the theme selector to change the look and feel.
+- Reset or Play again to start a fresh match.
+
 ## Run locally
 
 Because this is a static site, you can open `index.html` directly or serve the folder with a simple local server.
