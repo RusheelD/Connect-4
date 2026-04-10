@@ -38,6 +38,13 @@ test('applyMove toggles current player after valid move', () => {
   assert.equal(state.currentPlayer, PLAYER_TWO);
 });
 
+test('applyMove reports the player who made the move', () => {
+  const state = createGameState();
+  const result = applyMove(state, 0);
+  assert.equal(result.success, true);
+  assert.equal(result.player, PLAYER_ONE);
+});
+
 test('applyMove keeps current player when move is invalid', () => {
   const state = createGameState();
   const result = applyMove(state, -1);
