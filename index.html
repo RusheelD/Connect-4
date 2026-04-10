@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="theme-classic">
+    <main class="app">
+      <header class="app__header">
+        <h1 class="app__title">Connect 4</h1>
+        <p class="app__subtitle">Drop four discs in a row to win. Play with a friend or challenge the AI.</p>
+      </header>
+
+      <section class="hud" aria-live="polite">
+        <div class="hud__status">
+          <span class="hud__status-indicator" aria-hidden="true"></span>
+          <span data-status-text>Player 1's turn</span>
+        </div>
+        <div class="hud__controls">
+          <label class="control-group">
+            Mode
+            <select data-mode-select>
+              <option value="pass-and-play">Pass &amp; Play</option>
+              <option value="ai">Play vs AI</option>
+            </select>
+          </label>
+          <label class="control-group" data-difficulty-group>
+            Difficulty
+            <select data-difficulty-select>
+              <option value="easy">Easy</option>
+              <option value="normal" selected>Normal</option>
+              <option value="hard">Hard</option>
+              <option value="expert">Expert</option>
+            </select>
+          </label>
+          <label class="control-group">
+            Theme
+            <select data-theme-select>
+              <option value="classic">Classic</option>
+              <option value="neon">Neon</option>
+              <option value="midnight">Midnight</option>
+            </select>
+          </label>
+          <button class="btn" type="button" data-reset>Reset</button>
+        </div>
+      </section>
+
+      <section class="board-wrapper">
+        <div class="board" role="grid" aria-label="Connect 4 board" data-board></div>
+      </section>
+
+      <section class="banner" role="status" aria-live="polite" data-banner>
+        <span class="banner__message" data-banner-message></span>
+        <button class="btn btn--primary" type="button" data-play-again>Play again</button>
+      </section>
+    </main>
+
+    <script type="module" src="./ui.js"></script>
+  </body>
+</html>
