@@ -19,6 +19,20 @@ export const EMPTY_CELL = null;
  * @typedef {'playing' | 'won' | 'draw'} GameStatus
  * @typedef {'pass-and-play' | 'ai'} GameMode
  * @typedef {'easy' | 'normal' | 'hard' | 'expert'} DifficultyLevel
+ * @typedef {{
+ *   board: BoardState,
+ *   currentPlayer: PlayerToken,
+ *   status: GameStatus,
+ *   winner: PlayerToken | null
+ * }} GameState
+ * @typedef {{
+ *   success: boolean,
+ *   row: number | null,
+ *   col: number,
+ *   player: PlayerToken,
+ *   status: GameStatus,
+ *   winner: PlayerToken | null
+ * }} MoveResult
  */
 
 /** Status values */
