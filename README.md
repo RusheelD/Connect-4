@@ -31,6 +31,17 @@ node -e "require('node:http').createServer((req,res)=>{require('node:fs').create
 
 Then visit `http://localhost:8080` if you used the server.
 
+## Run tests
+
+The core rules and AI scoring are covered by lightweight Node tests.
+
+```bash
+node tests/boardHelpers.test.mjs
+node tests/gameRules.test.mjs
+node tests/turnManager.test.mjs
+node tests/aiEvaluation.test.mjs
+```
+
 ## Deploy to GitHub Pages
 
 1. Push the repository to GitHub.
