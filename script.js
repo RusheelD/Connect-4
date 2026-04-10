@@ -115,13 +115,14 @@ export const applyMove = (state, col) => {
     };
   }
 
-  const row = dropDisc(state.board, col, state.currentPlayer);
+  const mover = state.currentPlayer;
+  const row = dropDisc(state.board, col, mover);
   if (row === null) {
     return {
       success: false,
       row: null,
       col,
-      player: state.currentPlayer,
+      player: mover,
       status: state.status,
       winner: state.winner,
     };
@@ -135,14 +136,14 @@ export const applyMove = (state, col) => {
     state.status = GameStatus.DRAW;
     state.winner = null;
   } else {
-    state.currentPlayer = togglePlayer(state.currentPlayer);
+    state.currentPlayer = togglePlayer(mover);
   }
 
   return {
     success: true,
     row,
     col,
-    player: state.currentPlayer,
+    player: mover,
     status: state.status,
     winner: state.winner,
   };
